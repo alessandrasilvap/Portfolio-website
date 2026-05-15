@@ -128,29 +128,45 @@
         }
         .containerText {
             display: flex;
-            gap: 95px;
+            gap: 30px;
             max-width: 450px;
             flex-direction: column;
             padding: 30px;
         }
         .linhaVertical {
-            height: 350px;
+            height: 450px;
             width: 2px;
             margin: 55px;
-            background-color: #94a3b8;
+            background-color: #475569;
         }
         .containerSkills {
             display: flex;
             gap: 20px;
-            max-width: 500px;
             flex-direction: column;
-            padding: 15px;
+        }
+        .rowSkills {
+            display: flex;
+            gap: 20px;
+            align-items: stretch;
         }
         .cardSkill {
-            width: 250px;
-            height: 120px;
-            background-color: #94a3b8;
+            background-color: #aeccf7;
             border-radius: 20px;
+            padding: 15px;
+            width: 250px;
+            height: 100px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .cardSkill:hover {
+            transform: scale(1.03);
+        }
+        .cardGrande {
+            width: 560px;
         }
     </style>
 </head>
@@ -187,7 +203,7 @@
         <section id="sobre">
             <div class="containerText">
 				<h1>Sobre</h1>
-				<p>Tenho experiência prática no desenvolvimento de aplicações completas, incluindo autenticação de usuários, integração com APIs e deploy em cloud.
+				<p style="line-height: 1.6; font-size: 18px;">Tenho experiência prática no desenvolvimento de aplicações completas, incluindo autenticação de usuários, integração com APIs e deploy em cloud.
 				Já desenvolvi um chatbot corporativo integrado com API da Meta e hospedado na Google Cloud, além de sistemas web com arquitetura MVC.
 				Busco evoluir continuamente como desenvolvedora, criando soluções eficientes e escaláveis.</p>
 			</div>
@@ -195,22 +211,26 @@
             <div class="linhaVertical"></div> <!--Vai separar em uma linha vertical-->
 
 			<div class="containerSkills">
-				<div>
-					<div class="cardSkill"><h3>Front-end:</h3><p>HTML5 • CSS3 • JavaScript • Responsividade • Manipulação do DOM</p></div>
-					<div class="cardSkill"><h3>Cloud:</h3><p>Google Cloud Platform • Deploy de aplicações • Configuração de domínio</p></div>
-					<div class="cardSkill"><h3>Back-end:</h3><p>PHP • Python •  Autenticação e sessões</p></div>
-					<div class="cardSkill"><h3>Banco de dados:</h3><p>MySQL • MongoDB • Firebase</p></div>
-					<div class="cardSkill"><h3>Mobile:</h3><p>React Native • Navegação entre telas</p></div>
-					<div class="cardSkill"><h3>Análise de dados:</h3><p>Python • Excel • Power BI • Manipulação de dados</p></div>
-				</div>
+                <div class="rowSkills">
+                    <div class="cardSkill"><h3>Front-end:</h3><p>HTML5 • CSS3 • JavaScript • Responsividade • Manipulação do DOM</p></div>
+				    <div class="cardSkill"><h3>Cloud:</h3><p>Google Cloud Platform • Deploy de aplicações • Configuração de domínio</p></div>
+                </div>
 
-				<div>
-					<div class="cardSkill"><h3>Ferramentas & Boas práticas:</h3><p>Git & GitHub • Noções de Metodologia Ágil – Scrum • Consumo de APIs REST • Webhooks • Estruturação de lógica de sistemas • Debug e tratamento de erros</p></div>
-				</div>
+                <div class="rowSkills">
+                    <div class="cardSkill"><h3>Back-end:</h3><p>PHP • Python •  Autenticação e sessões</p></div>
+                    <div class="cardSkill"><h3>Banco de dados:</h3><p>MySQL • MongoDB • Firebase</p></div>
+                </div>
+
+                <div class="rowSkills">
+                    <div class="cardSkill"><h3>Mobile:</h3><p>React Native • Navegação entre telas</p></div>
+				    <div class="cardSkill"><h3>Análise de dados:</h3><p>Python • Excel • Power BI • Manipulação de dados</p></div>
+                </div>
+				
+				<div class="cardSkill cardGrande">
+                    <div class="cardSkill"><h3>Ferramentas & Boas práticas:</h3><p>Git & GitHub • Noções de Metodologia Ágil – Scrum • Consumo de APIs REST • Webhooks • Estruturação de lógica de sistemas • Debug e tratamento de erros</p></div>
+                </div>
 			</div>
         </section>
-
-        <hr>
 
         <section id="projetos"></section>
 
