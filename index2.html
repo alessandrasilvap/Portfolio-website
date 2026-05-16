@@ -78,11 +78,11 @@
             gap: 15px;
             max-width: 700px;
         }
-        h1 {
+        .h1 {
             font-size: 48px;
             line-height: 1.2;
         }
-        h2 {
+        .h2 {
             font-size: 24px;
             color: #cbd5e1;
         }
@@ -112,7 +112,7 @@
             transform: scale(1.05);
         }
 
-        hr {
+        .linhaHorizontal {
             width: 90%;
             margin: 0 auto;
             border: 10px; 
@@ -150,11 +150,11 @@
             align-items: stretch;
         }
         .cardSkill {
-            background-color: #aeccf7;
+            background-color: #6a7189;
             border-radius: 20px;
             padding: 15px;
             width: 250px;
-            height: 100px;
+            height: 85px;
             transition: 0.3s;
             display: flex;
             flex-direction: column;
@@ -167,6 +167,25 @@
         }
         .cardGrande {
             width: 560px;
+        }
+        .cardTitle {
+            color: #ffffff;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .containerTraining {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+        }
+        .cardTraining {
+            background-color: #6a7189;
+            border-radius: 20px;
+            padding: 15px;
+            width: 950px;
+            height: 25px;
+            text-align: center;
         }
     </style>
 </head>
@@ -189,16 +208,16 @@
         <img src="/img.png" alt="Eu">
 
         <div class="inicio">
-            <h1>Desenvolvedora focada em criar soluções reais com APIs, cloud e sistemas completos</h1>
-            <h2>Alessandra Cristina da Silva Pereira</h2>
-            <h3>21 anos • Rio de Janeiro - RJ</h3>
+            <h1 class="h1">Desenvolvedora focada em criar soluções reais com APIs, cloud e sistemas completos</h1>
+            <h2 class="h2">Alessandra Cristina da Silva Pereira</h2>
+            <h3 class="h3">21 anos • Rio de Janeiro - RJ</h3>
 
             <div class="navigationControle">
                 <button class="navigation" type="button">Ver projetos</button> <button class="navigation"  type="button">Contato</button> <button class="navigation" type="button">Versão em Inglês</button>
             </div>
         </div>
 	</header>
-    <hr>
+    <hr class="linhaHorizontal">
     <main>
         <section id="sobre">
             <div class="containerText">
@@ -212,39 +231,54 @@
 
 			<div class="containerSkills">
                 <div class="rowSkills">
-                    <div class="cardSkill"><h3>Front-end:</h3><p>HTML5 • CSS3 • JavaScript • Responsividade • Manipulação do DOM</p></div>
-				    <div class="cardSkill"><h3>Cloud:</h3><p>Google Cloud Platform • Deploy de aplicações • Configuração de domínio</p></div>
+                    <div class="cardSkill"><h3 class="cardTitle">Front-end:</h3><p>HTML5 • CSS3 • JavaScript • Responsividade • Manipulação do DOM</p></div>
+				    <div class="cardSkill"><h3 class="cardTitle">Cloud:</h3><p>Google Cloud Platform • Deploy de aplicações • Configuração de domínio</p></div>
                 </div>
 
                 <div class="rowSkills">
-                    <div class="cardSkill"><h3>Back-end:</h3><p>PHP • Python •  Autenticação e sessões</p></div>
-                    <div class="cardSkill"><h3>Banco de dados:</h3><p>MySQL • MongoDB • Firebase</p></div>
+                    <div class="cardSkill"><h3 class="cardTitle">Back-end:</h3><p>PHP • Python •  Autenticação e sessões</p></div>
+                    <div class="cardSkill"><h3 class="cardTitle">Banco de dados:</h3><p>MySQL • MongoDB • Firebase</p></div>
                 </div>
 
                 <div class="rowSkills">
-                    <div class="cardSkill"><h3>Mobile:</h3><p>React Native • Navegação entre telas</p></div>
-				    <div class="cardSkill"><h3>Análise de dados:</h3><p>Python • Excel • Power BI • Manipulação de dados</p></div>
+                    <div class="cardSkill"><h3 class="cardTitle">Mobile:</h3><p>React Native • Navegação entre telas</p></div>
+				    <div class="cardSkill"><h3 class="cardTitle">Análise de dados:</h3><p>Python • Excel • Power BI • Manipulação de dados</p></div>
                 </div>
 				
 				<div class="cardSkill cardGrande">
-                    <div class="cardSkill"><h3>Ferramentas & Boas práticas:</h3><p>Git & GitHub • Noções de Metodologia Ágil – Scrum • Consumo de APIs REST • Webhooks • Estruturação de lógica de sistemas • Debug e tratamento de erros</p></div>
+                    <div class="cardSkill"><h3 class="cardTitle">Ferramentas & Boas práticas:</h3><p>Git & GitHub • Noções de Metodologia Ágil – Scrum • Consumo de APIs REST • Webhooks • Estruturação de lógica de sistemas • Debug e tratamento de erros</p></div>
                 </div>
 			</div>
         </section>
 
-        <section id="projetos"></section>
+        <hr class="linhaHorizontal">
 
-        <hr>
+        <section id="projetos">
+            <h1>Projetos</h1>
+        </section>
 
-        <section id="formacao"></section>
+        <hr class="linhaHorizontal">
 
-        <hr>
+        <section id="formacao">
+            <h1>Formação</h1>
 
-        <section id="experiencias"></section>
+            <div class="containerTraining">
+                <div class="cardTraining">Formação 1</div>
+                <div class="cardTraining">Formação 2</div>
+            </div>
+        </section>
 
-        <hr>
+        <hr class="linhaHorizontal">
 
-        <section id="contatos"></section>
+        <section id="experiencias">
+            <h1>Experiências</h1>
+        </section>
+
+        <hr class="linhaHorizontal">
+
+        <section id="contatos">
+            <h1>Contatos</h1>
+        </section>
     </main>
 
     <footer></footer>
