@@ -6,142 +6,435 @@
     <title>My Portfólio</title>
     <style>
         * {
-            background-color: #0f172a;
             color: #ffffff;
             font-family: Open Sans;
             margin: 0;
         }
+        body {
+            background-color: #0f172a;
+        }
         nav {
+            display: flex;
             background-color: #6a7189;
-            padding-bottom: 15px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+        }
+        .logo {
+            background-color: #ffffff;
+            color: #6a7189;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 32px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         ul {
-            background-color: #6a7189;
-            list-style-type: none;
-            direction: right;
-        
+            list-style: none;
         }
         ul li {
-            background-color: #6a7189;
             display: inline-block;
-            font-size: 18px;
-            padding: 5px;
         }
-		img {
-			background-image: url('IMG_2452.JPG');
-			width: 200px;
-			height: 200px;
-			border-radius: 50%;
-			margin: 30px;
-		}
-		footer {
+        ul li a {
+            display: block;
+            padding: 20px 20px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+        ul li a:hover {
+            background-color: #0f172a;
+            color: #ffffff;
+            border-radius: 10px;
+            transform: scale(1.05);
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            align-items: center;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        img {
+            width: 400px;;
+            height: 400px;;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: 0.3s;
+            background-color: #ffffff;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        .inicio {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+            max-width: 700px;
+        }
+        .h1 {
+            font-size: 48px;
+            line-height: 1.2;
+        }
+        .h2 {
+            font-size: 24px;
+            color: #cbd5e1;
+        }
+        h3 {
+            font-size: 18px;
+            color: #94a3b8;
+            font-weight: normal;
+        }
+        .navigationControle {
+            display: flex;
+            gap: 30px;
+        }
+        .navigation {
+            padding: 0 25px;
+            height: 50px;
+            border-radius: 30px;
             background-color: #6a7189;
-            padding-bottom: 15px;
-		}
+            color: #ffffff;
+            border: none;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .navigation:hover {
+            cursor: pointer;
+            background-color: #0f172a;
+            transform: scale(1.05);
+        }
+
+        .linhaHorizontal {
+            width: 90%;
+            margin: 0 auto;
+            border: 10px; 
+            height: 2px; 
+            background-color: #ffffff; 
+        }
+        main {
+            padding: 15px;
+        }
+
+        section {
+            display: flex;
+        }
+        .containerText {
+            display: flex;
+            gap: 30px;
+            max-width: 450px;
+            flex-direction: column;
+            padding: 30px;
+        }
+        .linhaVertical {
+            height: 450px;
+            width: 2px;
+            margin: 55px;
+            background-color: #475569;
+        }
+        .containerSkills {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+        }
+        .rowSkills {
+            display: flex;
+            gap: 20px;
+            align-items: stretch;
+        }
+        .cardSkill {
+            background-color: #6a7189;
+            border-radius: 20px;
+            padding: 15px;
+            width: 250px;
+            height: 85px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .cardSkill:hover {
+            transform: scale(1.03);
+        }
+        .cardGrande {
+            width: 560px;
+        }
+        .cardTitle {
+            color: #ffffff;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .containerProjects {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            padding: 30px;
+        }
+        .rowProjects {
+            display: flex;
+            gap: 20px;
+        }
+        .cardProject {
+            background-color: #6a7189;
+            border-radius: 20px;
+            padding: 15px;
+            width: 300px;
+            height: 150px;
+            transition: 0.3s;
+            margin: 15px;
+        }
+
+        .containerTraining {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            padding: 30px;
+        }
+        .cardTraining {
+            background-color: #6a7189;
+            border-radius: 20px;
+            padding: 15px;
+            width: 950px;
+            height: 25px;
+            margin: 5px;
+        }
+
+        .containerExperiences {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            padding: 30px;
+        }
+        .cardExperiences {
+            background-color: #6a7189;
+            border-radius: 20px;
+            padding: 15px;
+            width: 950px;
+            height: 25px;
+            margin: 5px;
+        }
+
+        .containerContacts {
+            display: flex;
+            gap: 20px;
+            flex-direction: column;
+            padding: 30px;
+        }
+        .cardContacts {
+            background-color: #1e293b;
+            border-radius: 20px;
+            padding: 15px;
+            width: 850px;
+            height: 150px;
+            text-align: center;
+            margin: 20px;
+        }
+        .navigationControl {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #6a7189;
+            text-align: center;
+            padding: 15px;
+        }
     </style>
 </head>
 <body>
     <nav>
+        <div class="logo">
+            A
+        </div>
 		<ul>
-			<li>Início</li>
-			<li>Sobre</li>
-			<li>Projetos</li>
-            <li>Formação</li>
-			<li>Experiências</li>
+			<li><a href="#inicio">Início</a></li>
+			<li><a href="#sobre">Sobre</a></li>
+			<li><a href="#projetos">Projetos</a></li>
+            <li><a href="#formacao">Formação</a></li>
+			<li><a href="#experiencias">Experiências</a></li>
+            <li><a href="#contatos">Contatos</a></li>
 		</ul>
 	</nav>
 
-	<header>
-            <img>
+    <header id="inicio">
+        <img src="/img.png" alt="Eu">
 
-	        <h1>Desenvolvedora focada em criar soluções reais com APIs, cloud e sistemas completos</h1>
-            <h2>Alessandra Cristina da Silva Pereira</h2>
-            <h3>21 anos</h3>
-            <h3>Rio de Janeiro - RJ</h3>
+        <div class="inicio">
+            <h1 class="h1">Desenvolvedora focada em criar soluções reais com APIs, cloud e sistemas completos</h1>
+            <h2 class="h2">Alessandra Cristina da Silva Pereira</h2>
+            <h3 class="h3">21 anos • Rio de Janeiro - RJ</h3>
 
-	        <button>Ver projetos</button> <button>Contato</button> <button>Versão em Inglês</button>
+            <div class="navigationControle">
+                <button class="navigation" type="button"><a href="#projetos">Ver projetos</a></button> <button class="navigation"  type="button"><a href="#contatos">Contato</a></button> <button class="navigation" type="button"><a href="index_en.html" target="_blank">Versão em Inglês</a></button>
+            </div>
+        </div>
 	</header>
 
-	<main>
-		<hr>
-		<section>
-			<h1>Sobre</h1>
-			<p>Tenho experiência prática no desenvolvimento de aplicações completas, incluindo autenticação de usuários, integração com APIs e deploy em cloud.
-            Já desenvolvi um chatbot corporativo integrado com API da Meta e hospedado na Google Cloud, além de sistemas web com arquitetura MVC.
-            Busco evoluir continuamente como desenvolvedora, criando soluções eficientes e escaláveis.
-            </p>
+    <hr class="linhaHorizontal">
 
-            <div></div> <!--Vai separar em uma linha vertical-->
-
-			<div>
-				<div><p>Front-end: HTML5 • CSS3 • JavaScript • Responsividade • Manipulação do DOM</p></div> <div><p>Cloud: Google Cloud Platform • Deploy de aplicações • Configuração de domínio</p></div>
-				<div><p>Back-end: PHP • Python •  Autenticação e sessões</p></div> <div><p>Banco de dados: MySQL • MongoDB • Firebase</p></div>
-				<div><p>Mobile: React Native • Navegação entre telas</p></div> <div><p>Análise de dados: Python • Excel • Power BI • Manipulação de dados</p></div>
+    <main>
+        <section id="sobre">
+            <div class="containerText">
+				<h1>Sobre</h1>
+				<p style="line-height: 1.6; font-size: 18px;">Tenho experiência prática no desenvolvimento de aplicações completas, incluindo autenticação de usuários, integração com APIs e deploy em cloud.
+				Já desenvolvi um chatbot corporativo integrado com API da Meta e hospedado na Google Cloud, além de sistemas web com arquitetura MVC.
+				Busco evoluir continuamente como desenvolvedora, criando soluções eficientes e escaláveis.</p>
 			</div>
 
-			<div>
-				<div><p>Ferramentas & Boas práticas: Git & GitHub • Noções de Metodologia Ágil – Scrum • Consumo de APIs REST • Webhooks • Estruturação de lógica de sistemas • Debug e tratamento de erros</p></div>
-			</div>
-		</section>
+            <div class="linhaVertical"></div> <!--Vai separar em uma linha vertical-->
 
-		<hr>
-		<section>
-			<h1>Projetos</h1>
-			<div>
-				<div><p>Projeto 1(Chatbot)</p></div> <div><p>Projeto 2(Ecopoint)</p></div> <div><p>Projeto 3(Mapa Unisuam)</p></div>
-				<div><p>Projeto 4(InfoWeb)</p></div> <div><p>Projeto 5(Automação de Cadastro de Usuários com Low-code -> FAZER)</p></div> <div><p>Projeto 6(Gerenciador de gastos -> FAZER)</p></div>
-                <div><p>Projeto 7(Site da avaliação (com tema roxo))</p></div> <div><p>Projeto 8(Sistema de análise de dados com Python)</p></div> <div><p>Projeto 9(Sistema com Node -> FAZER)</p></div>
+			<div class="containerSkills">
+                <div class="rowSkills">
+                    <div class="cardSkill"><h3 class="cardTitle">Front-end:</h3><p>HTML5 • CSS3 • JavaScript • Responsividade • Manipulação do DOM</p></div>
+				    <div class="cardSkill"><h3 class="cardTitle">Cloud:</h3><p>Google Cloud Platform • Deploy de aplicações • Configuração de domínio</p></div>
+                </div>
+
+                <div class="rowSkills">
+                    <div class="cardSkill"><h3 class="cardTitle">Back-end:</h3><p>PHP • Python •  Autenticação e sessões</p></div>
+                    <div class="cardSkill"><h3 class="cardTitle">Banco de dados:</h3><p>MySQL • MongoDB • Firebase</p></div>
+                </div>
+
+                <div class="rowSkills">
+                    <div class="cardSkill"><h3 class="cardTitle">Mobile:</h3><p>React Native • Navegação entre telas</p></div>
+				    <div class="cardSkill"><h3 class="cardTitle">Análise de dados:</h3><p>Python • Excel • Power BI • Manipulação de dados</p></div>
+                </div>
+				
+				<div class="cardSkill cardGrande">
+                    <div class="cardSkill"><h3 class="cardTitle">Ferramentas & Boas práticas:</h3><p>Git & GitHub • Noções de Metodologia Ágil – Scrum • Consumo de APIs REST • Webhooks • Estruturação de lógica de sistemas • Debug e tratamento de erros</p></div>
+                </div>
+			</div>
+        </section>
+
+        <hr class="linhaHorizontal">
+
+        <section id="projetos">
+            <div class="containerProjects">
+                <h1>Projetos</h1>
+
+                <div class="rowProjects">
+                    <div class="cardProject">
+                        <h3>Chatbot</h3>
+                        <p>Descrição do projeto 1</p>
+                    </div>
+                    <div class="cardProject">
+                        <h3>Ecopoint</h3>
+                        <p>Descrição do projeto 2</p>
+                    </div>
+                    <div class="cardProject">
+                        <h3>Mapa Unisuam</h3>
+                        <p>Descrição do projeto 3</p>
+                    </div>
+                </div>
+
+                <div class="rowProjects">
+                    <div class="cardProject">
+                        <h3>InfoWeb</h3>
+                        <p>Descrição do projeto 4</p>
+                    </div>
+                    <div class="cardProject">
+                        <h3>Automação de Cadastro de Usuários com Low-code -> FAZER</h3>
+                        <p>Descrição do projeto 5</p>
+                    </div>
+                    <div class="cardProject">
+                        <h3>Gerenciador de gastos -> FAZER</h3>
+                        <p>Descrição do projeto 6</p>
+                    </div>
+                </div>
+
+                <div class="rowProjects">
+                    <div class="cardProject">
+                        <h3>Site da avaliação (com tema roxo)</h3>
+                        <p>Descrição do projeto 7</p>
+                    </div>
+                    <div class="cardProject">
+                        <h3>Sistema de análise de dados com Python</h3>
+                        <p>Descrição do projeto 8</p>
+                    </div>
+                    <div class="cardProject">
+                        <h3>Sistema com Node -> FAZER</h3>
+                        <p>Descrição do projeto 9</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="linhaHorizontal">
+
+        <section id="formacao">
+            <div class="containerTraining">
+                <h1>Formação</h1>
+
+                <div class="cardTraining">Unisuam -> Análise e Desenvolvimento de Sistemas – Cursando (Previsão de Conclusão: 2026.2)</div>
+
+                <div class="cardTraining">Firjan SESI -> Ensino Médio Completo – Dezembro/2022 e Firjan SENAI -> Técnico em Informação Completo – Dezembro/2022</div>
+            </div>
+        </section>
+
+        <hr class="linhaHorizontal">
+
+        <section id="experiencias">
+            <div class="containerExperiences">
+                <h1>Experiências</h1>
+
+                <div class="cardExperiences">Estagiária -> Caplim(02/2026 até hoje = atual emprego) -> Funções</div>
+                <div class="cardExperiences">Encarregada II -> Comlurb(11/2025 até hoje = atual emprego) -> Funções</div>
+                <div class="cardExperiences">Estagiária -> Comlurb(12/2024 até 11/2025) -> Funções</div>
+                <div class="cardExperiences">Jovem Aprendiz -> Amil(10/2023 até 12/2024) -> Funções</div>
+            </div>
+        </section>
+
+        <hr class="linhaHorizontal">
+
+        <section id="contatos">
+            <div class="containerContacts">
+                <h1>Contatos</h1>
+
+                <div class="cardContacts">
+                    <p>Email: alessandracris393@email.com</p>
+                    <p>Telefone: (21) 96444-3878</p>
+                    <p>GitHub: <a href="https://github.com/alessandrasilvap" target="_blank">Alessandrasilvap</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/alessandra-pereira-377823237/" target="_blank">Alessandra Pereira</a></p>
                 
-                <!--
-                    VERIFICAR SE REALMENTE FAREI ESSES SISTEMAS:
-                        - Sistema novo do SARC (TALVEZ, criar)
-                        - Sistema com No-code (criar)
-                        - Sistema com Python com IA (criar)
-                -->
+                    <div class="navigationControl">
+                        <button class="navigation" type="button">Entrar em contato</button> <button class="navigation"  type="button">Baixar Currículo</button>
+                    </div>
+                </div>
             </div>
-		</section>
+        </section>
+    </main>
 
-        <section>
-			<h1>Formações</h1>
-			<div>
-				<div><p>Formação 1 (Unisuam -> Análise e Desenvolvimento de Sistemas – Cursando (Previsão de Conclusão: 2026.2))</p></div>
-				<div><p>Formação 2 (Firjan SESI -> Ensino Médio Completo – Dezembro/2022)</p></div>
-				<div><p>Formação 3 (Firjan SENAI -> Técnico em Informação Completo – Dezembro/2022)</p></div>
-			</div>
+    <footer>
+        <p>© 2026 Alessandra — Desenvolvedora</p>
+    </footer>
 
-            <h3>Certificados</h3> <!--Escolher os certificados que mais fazem sentido com desenvolvimento e afins-->
-            <div>
-                <div>Certificado 1</div> <div>Certificado 2</div> <div>Certificado 3</div> <div>Certificado 4</div>
-                <div>Certificado 5</div> <div>Certificado 6</div> <div>Certificado 7</div> <div>Certificado 8</div>
-            </div>
-		</section>
 
-		<hr>
-		<section>
-			<h1>Experiências</h1>
-			<div>
-				<div><p>Experiência 1 (Estagiária -> Caplim(02/2026 até hoje = atual emprego) -> Funções)</p></div>
-				<div><p>Experiência 2 (Encarregada II -> Comlurb(11/2025 até hoje = atual emprego) -> Funções)</p></div>
-				<div><p>Experiência 3 (Estagiária -> Comlurb(12/2024 até 11/2025) -> Funções)</p></div>
-				<div><p>Experiência 4 (Jovem Aprendiz -> Amil(10/2023 até 12/2024) -> Funções)</p></div>
-			</div>
-		</section>
 
-		<hr>
-		<section>
-			<h1>Contato</h1>
-			<div>
-				<p>E-mail: alessandracris393@gmail.com</p>
-				<p>GitHub: <a href="https://github.com/alessandrasilvap">Alessandrasilvap</a></p>
-				<p>Linkedin: <a href="https://www.linkedin.com/in/alessandra-pereira-377823237/">Alessandra Pereira</a></p>
-				<button>Entrar em contato</button>
-                <button>Baixar PDF do currículo</button>
-			</div>
-		</section>
-	</main>
 
-	<footer>
-		<p>© 2026 Alessandra — Desenvolvedora</p>
-	</footer>
+    <!--
+    Mudanças:
+    
+    -Tirar linhas do botão da section inicio
+    -Adicionar mais texto na section sobre
+    -Jogar os cards da section projects, training, experiences and contacts um pouco mais no meio
+    -Colocar o botão 'entrar em contato' funcionar para ir ao meu email
+
+
+
+    -Adicionar informações dos cards section projects, training and experiences 
+    -Criar versão em inglês para o botão 'versão em ingles' funcionar
+    -Atualizar currículo e adicionar para o botão 'baixar curriculo' funcionar
+    -->
 </body>
 </html>
