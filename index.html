@@ -9,16 +9,21 @@
             color: #ffffff;
             font-family: Open Sans;
             margin: 0;
+			box-sizing: border-box;
         }
         body {
             background-color: #0f172a;
         }
         nav {
             display: flex;
-            background-color: #6a7189;
+            background-color: rgba(106, 113, 137, 0.85);
+			backdrop-filter: blur(10px);
             justify-content: space-between;
             align-items: center;
             padding: 10px 40px;
+			position: fixed;
+			width: 100%;
+			z-index: 1000;
         }
         .logo {
             background-color: #ffffff;
@@ -32,20 +37,20 @@
             align-items: center;
             justify-content: center;
         }
-        ul {
+        nav ul {
             list-style: none;
         }
-        ul li {
+        nav ul li {
             display: inline-block;
         }
-        ul li a {
+        nav ul li a {
             display: block;
             padding: 20px 20px;
             text-decoration: none;
             transition: 0.3s;
             font-weight: 600;
         }
-        ul li a:hover {
+        nav ul li a:hover {
             background-color: #0f172a;
             color: #ffffff;
             border-radius: 10px;
@@ -59,6 +64,7 @@
             align-items: center;
             padding-top: 50px;
             padding-bottom: 50px;
+			margin-top: 90px;
         }
         img {
             width: 400px;;
@@ -100,15 +106,16 @@
             height: 50px;
             border-radius: 30px;
             background-color: #6a7189;
-            color: #ffffff;
-            border: none;
             font-size: 15px;
             font-weight: bold;
             transition: 0.3s;
+			display: flex;
+			align-items: center;
+			text-decoration: none;
         }
         .navigation:hover {
             cursor: pointer;
-            background-color: #0f172a;
+            background-color: #475569;
             transform: scale(1.05);
         }
 
@@ -119,24 +126,34 @@
             height: 2px; 
             background-color: #ffffff; 
         }
+		
         main {
             padding: 15px;
+			max-width: 1400px;
+		    margin: 0 auto;
         }
 
-        section {
-            display: flex;
-        }
+		section {
+		    scroll-margin-top: 120px;
+		}
+        .sectionSobre {
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    gap: 40px;
+			padding: 50px;
+		}
         .containerText {
             display: flex;
             gap: 30px;
             max-width: 450px;
             flex-direction: column;
-            padding: 30px;
+            padding: 10px;
         }
         .linhaVertical {
             height: 450px;
             width: 2px;
-            margin: 55px;
+            margin: 0 30px;
             background-color: #475569;
         }
         .containerSkills {
@@ -161,6 +178,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+			font-size: 16px;
         }
         .cardSkill:hover {
             transform: scale(1.03);
@@ -190,10 +208,58 @@
             border-radius: 20px;
             padding: 15px;
             width: 300px;
-            height: 150px;
+            height: 180px;
             transition: 0.3s;
             margin: 15px;
+			font-size: 20px;
+			position: relative;
+			overflow: hidden;
         }
+		.conteudoNormal {
+			opacity: 1;
+			transition: 0.3s;
+			pointer-events: none;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			line-height: 1.4;
+		}
+		.conteudoHover {
+			opacity: 0;
+			transition: 0.3s;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 15px;
+			text-align: center;
+			background-size: cover;
+			background-position: center;
+			border-radius: 20px;
+		}
+		.cardProject:hover .conteudoNormal {
+			opacity: 0;
+		}
+		.cardProject:hover .conteudoHover {
+			opacity: 1;
+		}
+		.navigationProjects {
+			padding: 0 25px;
+            height: 50px;
+            border-radius: 30px;
+            background-color: #000;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+		}
 
         .containerTraining {
             display: flex;
@@ -201,14 +267,13 @@
             flex-direction: column;
             padding: 30px;
 			align-items: center;
-        }
+		}
         .cardTraining {
             background-color: #6a7189;
             border-radius: 20px;
             padding: 15px;
-            width: 950px;
-            height: 25px;
-            margin: 5px;
+            width: 80%;
+			font-size: 20px;
         }
 
         .containerExperiences {
@@ -222,9 +287,15 @@
             background-color: #6a7189;
             border-radius: 20px;
             padding: 15px;
-            width: 950px;
-            height: 25px;
-            margin: 5px;
+            width: 80%;
+			font-size: 20px;
+        }
+		.cardExperiences h2 {
+		   margin-bottom: 10px;
+		}
+		.listaExperiencias {
+            list-style-type: '-';
+			line-height: 1.6;
         }
 
         .containerContacts {
@@ -238,10 +309,14 @@
             background-color: #1e293b;
             border-radius: 20px;
             padding: 15px;
-            width: 850px;
+            width: 70%;
             height: 150px;
             text-align: center;
             margin: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			font-size: 20px;
         }
         .navigationControl {
             display: flex;
@@ -253,7 +328,8 @@
         footer {
             background-color: #6a7189;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
+			font-size: 20px;
         }
     </style>
 </head>
@@ -286,10 +362,12 @@
         </div>
 	</header>
 
-    <hr class="linhaHorizontal">
+    
 
     <main>
-        <section id="sobre">
+		<hr class="linhaHorizontal">
+		
+        <section id="sobre" class="sectionSobre">
             <div class="containerText">
 				<h1>Sobre</h1>
 				<p style="line-height: 1.6; font-size: 18px;">Tenho experiência prática no desenvolvimento de aplicações completas, incluindo autenticação de usuários, integração com APIs e deploy em cloud.
@@ -330,46 +408,127 @@
 
                 <div class="rowProjects">
                     <div class="cardProject">
-                        <h3>Chatbot</h3>
-                        <p>Descrição do projeto 1</p>
+						<div class="conteudoNormal">
+							<h2 class="h2">Chatbot Corporativo</h2>
+                        	<p>Python • MySQL • API Meta</p>
+							<p>🚧 Status: Em testes</p>
+							<p>Desenvolvedora: Alessandra</p>
+						</div>
+
+						<div class="conteudoHover" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('painel.png');">
+							<p>Sistema automatizado de atendimento integrado à API oficial da Meta com painel administrativo e deploy em cloud.</p>
+							<a class="navigationProjects" href="https://github.com/alessandrasilvap/Chatbot-WhatsApp" target="_blank">GitHub</a>
+						</div>
                     </div>
                     <div class="cardProject">
-                        <h3>Ecopoint</h3>
-                        <p>Descrição do projeto 2</p>
+						<div class="conteudoNormal">
+							<h2 class="h2">Ecopoint</h2>
+                        	<p>PHP • MySQL • MVC</p>
+							<p>🚧 Status: Finalizado</p>
+							<p>Desenvolvedores: Alessandra, Bryan, Eric e Gabriel</p>
+						</div>
+
+						<div class="conteudoHover" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('ecopoint.png');">
+							<p>Sistema web voltado para sustentabilidade e descarte consciente de materiais recicláveis.</p>
+							<a class="navigationProjects" href="https://github.com/alessandrasilvap/ecoPoint" target="_blank">GitHub</a>
+						</div>
                     </div>
                     <div class="cardProject">
-                        <h3>Mapa Unisuam</h3>
-                        <p>Descrição do projeto 3</p>
+						<div class="conteudoNormal">
+							<h2 class="h2">Mapa Unisuam</h2>
+                        	<p>React Native • Firebase</p>
+							<p>🚧 Status: Finalizado</p>
+							<p>Desenvolvedores: Alessandra, Bryan, Eric e Gabriel</p>
+						</div>
+
+						<div class="conteudoHover" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('');">
+							<p>Aplicativo desenvolvido para auxiliar alunos na localização de salas e andares dentro da faculdade.</p>
+							<a class="navigationProjects" href="https://github.com/Gabriel2005dev/app-projeto" target="_blank">GitHub</a>
+						</div>
                     </div>
                 </div>
 
                 <div class="rowProjects">
                     <div class="cardProject">
-                        <h3>InfoWeb</h3>
-                        <p>Descrição do projeto 4</p>
+						<div class="conteudoNormal">
+							<h2 class="h2">InfoWeb</h2>
+                        	<p>PHP • MySQL • MVC</p>
+							<p>🚧 Status: Finalizado</p>
+							<p>Desenvolvedores: Alessandra, Bryan, Eric e Gabriel</p>
+						</div>
+
+						<div class="conteudoHover" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('info.png');">
+							<p>Plataforma desenvolvida para auxiliar usuários com pouco conhecimento em internet e tecnologia.</p>
+							<a class="navigationProjects" href="https://github.com/Bryan22890/infoWeb" target="_blank">GitHub</a>
+						</div>
                     </div>
                     <div class="cardProject">
-                        <h3>Automação de Cadastro de Usuários com Low-code -> FAZER</h3>
-                        <p>Descrição do projeto 5</p>
+						<div class="conteudoNormal">
+							<h2 class="h2">Automação de Usuários</h2>
+                        	<p>Power Apps • Power Automate • API externa</p>
+							<p>🚧 Status: Em desenvolvimento</p>
+							<p>Desenvolvedora: Alessandra</p>
+						</div>
+
+						<div class="conteudoHover" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('');">
+							<p>Projeto desenvolvido utilizando ferramentas Low-code para automatizar o processo de cadastro de usuários.</p>
+							<a class="navigationProjects" href="https://github.com/alessandrasilvap/Automacao-de-Cadastro-de-Usuarios-com-Low-code" target="_blank">GitHub</a>
+						</div>
                     </div>
                     <div class="cardProject">
-                        <h3>Gerenciador de gastos -> FAZER</h3>
-                        <p>Descrição do projeto 6</p>
+						<div class="conteudoNormal">
+							<h2 class="h2">Gerenciador de gastos</h2>
+                        	<p>React Native • Firebase</p>
+							<p>🚧 Status: Em desenvolvimento</p>
+							<p>Desenvolvedora: Alessandra</p>
+						</div>
+
+						<div class="conteudoHover" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('');">
+							<p>Aplicativo de controle financeiro pessoal com categorização de gastos, acompanhamento de limites e gerenciamento de parcelas.</p>
+							<a class="navigationProjects" href="https://github.com/alessandrasilvap/AppGerenciador-de-gastos" target="_blank">GitHub</a>
+						</div>
                     </div>
                 </div>
 
                 <div class="rowProjects">
                     <div class="cardProject">
-                        <h3>Site da avaliação (com tema roxo)</h3>
-                        <p>Descrição do projeto 7</p>
+						<div class="conteudoNormal">
+							<h2 class="h2">Site da avaliação</h2>
+                        	<p>HTML • CSS • JavaScript</p>
+							<p>🚧 Status: Finalizado</p>
+							<p>Desenvolvedora: Alessandra</p>
+						</div>
+
+						<div class="conteudoHover" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('');">
+							<p>Sistema web desenvolvido para avaliação acadêmica com foco em formulários e interação com usuários.</p>
+							<a class="navigationProjects" href="https://github.com/alessandrasilvap/Site-avaliacao" target="_blank">GitHub</a>
+						</div>
                     </div>
                     <div class="cardProject">
-                        <h3>Sistema de análise de dados com Python</h3>
-                        <p>Descrição do projeto 8</p>
+						<div class="conteudoNormal">
+							<h2 class="h2">Sistema de análise de dados</h2>
+                        	<p>Python • Colab • Kaggle</p>
+							<p>🚧 Status: Finalizado</p>
+							<p>Desenvolvedora: Alessandra</p>
+						</div>
+
+						<div class="conteudoHover" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('analise.png');">
+							<p>Coleção de projetos práticos de análise de dados em Python, com foco em exploração de dados (EDA), transformação e visualização.</p>
+							<a class="navigationProjects" href="https://github.com/alessandrasilvap/-Miniprojetos-Python" target="_blank">GitHub</a>
+						</div>
                     </div>
                     <div class="cardProject">
-                        <h3>Sistema com Node -> FAZER</h3>
-                        <p>Descrição do projeto 9</p>
+						<div class="conteudoNormal">
+							<h2 class="h2">Sistema com Node</h2>
+                        	<p>Node.js • API REST</p>
+							<p>🚧 Status: Em desenvolvimento</p>
+							<p>Desenvolvedora: Alessandra</p>
+						</div>
+
+						<div class="conteudoHover" style="background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('');">
+							<p>Projeto em desenvolvimento para aprendizado prático de Node.js, integração de APIs e estruturação back-end.</p>
+							<a class="navigationProjects" href="https://github.com/alessandrasilvap/Sistema-Node" target="_blank">GitHub</a>
+						</div>
                     </div>
                 </div>
             </div>
@@ -382,23 +541,23 @@
                 <h1>Formação</h1>
 
                 <div class="cardTraining">
-					<p>🎓 Unisuam
-
-					Análise e Desenvolvimento de Sistemas
+					<h2 class="h2">Unisuam</h2>
+					<br>
+					<p>Análise e Desenvolvimento de Sistemas<br>
 					Cursando — Previsão: 2026.2</p>
 				</div>
 
                 <div class="cardTraining">
-					<p>🎓 Firjan SENAI
-
-					Técnico em Informação
+					<h2 class="h2">Firjan SENAI</h2>
+					<br>
+					<p>Técnico em Informação<br>
 					Conclusão: 2022</p>
 				</div>
 
 				 <div class="cardTraining">
-					 <p>🎓 Firjan SESI
-
-					Ensino Médio Completo
+					<h2 class="h2">Firjan SESI</h2>
+					<br>
+					<p>Ensino Médio Completo<br>
 					Conclusão: 2022</p>
 				 </div>
             </div>
@@ -410,10 +569,48 @@
             <div class="containerExperiences">
                 <h1>Experiências</h1>
 
-                <div class="cardExperiences">Estagiária -> Caplim(02/2026 até hoje = atual emprego) -> Funções</div>
-                <div class="cardExperiences">Encarregada II -> Comlurb(11/2025 até hoje = atual emprego) -> Funções</div>
-                <div class="cardExperiences">Estagiária -> Comlurb(12/2024 até 11/2025) -> Funções</div>
-                <div class="cardExperiences">Jovem Aprendiz -> Amil(10/2023 até 12/2024) -> Funções</div>
+                <div class="cardExperiences">
+					<h2 class="h2">💼 Caplim — Estagiária de Desenvolvimento Mobile</h2>
+					<p>Fev/2026 - Atual</p>
+					<br>
+					<ul class="listaExperiencias">
+						<li>Desenvolvimento mobile com React Native;</li>
+						<li>Desenvolvimento back-end com Node.js e TypeScript;</li>
+						<li>Integração com APIs REST;</li>
+						<li>Correção de bugs e manutenção de funcionalidades.</li>
+					</ul>
+				</div>
+                <div class="cardExperiences">
+					<h2 class="h2">⚙️ Comlurb — Encarregada II</h2>
+					<p>Nov/2025 - Atual</p>
+					<br>
+					<ul class="listaExperiencias">
+						<li>Tratamento e análise de dados corporativos;</li>
+						<li>Construção de indicadores estratégicos;</li>
+						<li>Consolidação de dados em bases estruturadas;</li>
+						<li>Utilização de Excel e Power BI.</li>
+					</ul>
+				</div>
+                <div class="cardExperiences">
+					<h2 class="h2">⚙️ Comlurb — Estagiária de Suporte</h2>
+					<p>Dez/2024 - Nov/2025</p>
+					<br>
+					<ul class="listaExperiencias">
+						<li>Suporte técnico de hardware e software;</li>
+						<li>Auxílio na manutenção de sistemas;</li>
+						<li>Apoio na resolução de problemas de rede.</li>
+					</ul>
+				</div>
+                <div class="cardExperiences">
+					<h2 class="h2">💼 Esho Empresa de Serviços Hospitalares S.A. — Jovem Aprendiz Auxiliar Administrativo</h2>
+					<p>Out/2023 — Dez/2024</p>
+					<ul class="listaExperiencias">
+						<li>Organização e controle de documentos corporativos;</li>
+						<li>Suporte em rotinas administrativas e atendimento ao público;</li>
+						<li>Utilização de sistemas internos para registro e controle de informações;</li>
+						<li>Apoio em atividades organizacionais e operacionais da equipe.</li>
+					</ul>
+				</div>
             </div>
         </section>
 
@@ -446,17 +643,18 @@
 
     <!--
     Mudanças:
-    
-    -Tirar linhas do botão da section inicio
-    -Adicionar mais texto na section sobre
-    -Jogar os cards da section projects, training, experiences and contacts um pouco mais no meio
-    -Colocar o botão 'entrar em contato' funcionar para ir ao meu email
-
-
-
+	
     -Adicionar informações dos cards section projects, training and experiences 
     -Criar versão em inglês para o botão 'versão em ingles' funcionar
     -Atualizar currículo e adicionar para o botão 'baixar curriculo' funcionar
+
+
+	Feito:
+
+	-Adicionar mais texto na section sobre
+	-Tirar linhas do botão da section inicio
+	-Jogar os cards da section projects, training, experiences and contacts um pouco mais no meio
+	-Colocar o botão 'entrar em contato' funcionar para ir ao meu email
     -->
 </body>
 </html>
