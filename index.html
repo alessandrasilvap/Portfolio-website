@@ -41,6 +41,9 @@
             align-items: center;
             justify-content: center;
         }
+		.menuHamburguer {
+		    display: none;
+		}
         nav ul {
             list-style: none;
         }
@@ -367,7 +370,26 @@
 
 
 		/*Responsividade*/
+		@media (max-width: 537px) {
+			img {
+				width: 250px;
+    			height: 250px;
+			}
+			.cardGrande {
+				width: auto;
+			}
+			.rowSkills {
+				flex-direction: column;
+			}
+			.cardContacts {
+				width: auto;
+			}
+		}
+		
 		@media (max-width: 768px) {
+			.h1 {
+				font-size: 35px;
+			}
 			header {
 				gap: 40px;
 				flex-direction: column;
@@ -378,7 +400,82 @@
 				flex-direction: column;
 			}
 			.linhaVertical {
-				
+				display: none;
+			}
+			.containerSkills {
+				flex-direction: column;
+				align-items: center;
+			}
+			.rowProjects {
+				flex-direction: column;
+			}
+			.cardContacts {
+				width: 90%;
+			}
+		}
+
+		@media (max-width: 793px) {
+			.menuHamburguer {
+		        display: block;
+		        font-size: 35px;
+		        cursor: pointer;
+		    }
+		
+		    nav ul {
+		        display: none;
+		        flex-direction: column;
+		        position: absolute;
+		        top: 80px;
+		        right: 20px;
+		        background-color: #6a7189;
+		        border-radius: 15px;
+		        padding: 20px;
+		        gap: 10px;
+		    }
+		
+		    nav ul.ativo {
+		        display: flex;
+		    }
+			img {
+				width: 250px;
+    			height: 250px;
+			}
+			.h1 {
+				font-size: 30px;
+			}
+		}
+
+		@media (max-width: 999px) {
+			.rowProjects {
+				flex-direction: column;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			.inicio {
+				max-width: 500px;
+			}
+			.h1 {
+				font-size: 38px;
+			}
+			.sectionSobre {
+				flex-direction: column;
+			}
+			.linhaVertical {
+				display: none;
+			}
+			.containerText {
+				max-width: 850px;
+			}
+		}
+
+		@media (max-width: 1063px) {
+			img {
+				width: 300px;
+    			height: 300px;
+			}
+			.h1 {
+				font-size: 38px;
 			}
 		}
     </style>
@@ -388,6 +485,11 @@
         <div class="logo">
             A
         </div>
+		
+		<div class="menuHamburguer">
+		    ☰
+		</div>
+		
 		<ul>
 			<li><a href="#inicio">Início</a></li>
 			<li><a href="#sobre">Sobre</a></li>
@@ -689,6 +791,16 @@
         <p>© 2026 Alessandra — Desenvolvedora</p>
 		<p>Desenvolvedora Full Stack</p>
     </footer>
+	
 	<a href="#inicio" class="botaoTopo">↑</a>
+
+	<script>
+		const menuHamburguer = document.querySelector(".menuHamburguer");
+	    const menu = document.querySelector("nav ul");
+	
+	    menuHamburguer.addEventListener("click", () => {
+	        menu.classList.toggle("ativo");
+	    });
+	</script>
 </body>
 </html>
