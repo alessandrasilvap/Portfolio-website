@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfólio</title>
+	<link rel="icon" href="img.png">
     <style>
         * {
             color: #ffffff;
@@ -11,6 +12,9 @@
             margin: 0;
 			box-sizing: border-box;
         }
+		html {
+		    scroll-behavior: smooth;
+		}
         body {
             background-color: #0f172a;
         }
@@ -62,9 +66,8 @@
             justify-content: center;
             gap: 80px;
             align-items: center;
-            padding-top: 50px;
+            padding-top: 140px;
             padding-bottom: 50px;
-			margin-top: 90px;
         }
         img {
             width: 400px;;
@@ -184,8 +187,10 @@
             transform: scale(1.03);
         }
         .cardGrande {
-            width: 560px;
-        }
+		    width: 520px;
+		    height: auto;
+		    min-height: 100px;
+		}
         .cardTitle {
             color: #ffffff;
             text-decoration: underline;
@@ -310,9 +315,8 @@
             border-radius: 20px;
             padding: 15px;
             width: 70%;
-            height: 150px;
+            height: auto;
             text-align: center;
-            margin: 20px;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -325,12 +329,58 @@
             margin-top: 20px;
         }
 
+		.cardExperiences:hover,
+		.cardTraining:hover,
+		.cardContacts:hover {
+		    transform: scale(1.01);
+		    transition: 0.3s;
+		}
+
         footer {
             background-color: #6a7189;
             text-align: center;
             padding: 20px;
 			font-size: 20px;
         }
+
+		.botaoTopo {
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+		    width: 55px;
+		    height: 55px;
+		    background-color: #6a7189;
+		    border-radius: 50%;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    text-decoration: none;
+		    font-size: 28px;
+		    font-weight: bold;
+		    transition: 0.3s;
+		    z-index: 999;
+		}
+		.botaoTopo:hover {
+			background-color: #475569;
+			transform: scale(1.1);
+		}
+
+
+		/*Responsividade*/
+		@media (max-width: 768px) {
+			header {
+				gap: 40px;
+				flex-direction: column;
+				margin: 15px;
+			}
+
+			.sectionSobre {
+				flex-direction: column;
+			}
+			.linhaVertical {
+				
+			}
+		}
     </style>
 </head>
 <body>
@@ -370,6 +420,7 @@
         <section id="sobre" class="sectionSobre">
             <div class="containerText">
 				<h1>Sobre</h1>
+				<h2 class="h2">React Native • Node.js • PHP • Python</h2>
 				<p style="line-height: 1.6; font-size: 18px;">Tenho experiência prática no desenvolvimento de aplicações completas, incluindo autenticação de usuários, integração com APIs e deploy em cloud.
 				Atualmente atuo no desenvolvimento mobile com React Native, além de desenvolver soluções envolvendo automações, painéis administrativos e integração de sistemas.
 				Já desenvolvi projetos completos utilizando PHP, MySQL, Firebase, Google Cloud e arquitetura MVC, sempre buscando criar aplicações organizadas, funcionais e escaláveis.
@@ -395,7 +446,7 @@
                 </div>
 				
 				<div class="cardSkill cardGrande">
-                    <div class="cardSkill"><h3 class="cardTitle">Ferramentas & Boas práticas:</h3><p>Git & GitHub • Noções de Metodologia Ágil – Scrum • Consumo de APIs REST • Webhooks • Estruturação de lógica de sistemas • Debug e tratamento de erros</p></div>
+                    <h3 class="cardTitle">Ferramentas & Boas práticas:</h3><p>Git & GitHub • Noções de Metodologia Ágil – Scrum • Consumo de APIs REST • Webhooks • Estruturação de lógica de sistemas • Debug e tratamento de erros</p>
                 </div>
 			</div>
         </section>
@@ -636,25 +687,8 @@
 
     <footer>
         <p>© 2026 Alessandra — Desenvolvedora</p>
+		<p>Desenvolvedora Full Stack</p>
     </footer>
-
-
-
-
-    <!--
-    Mudanças:
-	
-    -Adicionar informações dos cards section projects, training and experiences 
-    -Criar versão em inglês para o botão 'versão em ingles' funcionar
-    -Atualizar currículo e adicionar para o botão 'baixar curriculo' funcionar
-
-
-	Feito:
-
-	-Adicionar mais texto na section sobre
-	-Tirar linhas do botão da section inicio
-	-Jogar os cards da section projects, training, experiences and contacts um pouco mais no meio
-	-Colocar o botão 'entrar em contato' funcionar para ir ao meu email
-    -->
+	<a href="#inicio" class="botaoTopo">↑</a>
 </body>
 </html>
