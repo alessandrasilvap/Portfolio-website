@@ -179,6 +179,7 @@
             gap: 20px;
             flex-direction: column;
             padding: 30px;
+			align-items: center;
         }
         .rowProjects {
             display: flex;
@@ -199,6 +200,7 @@
             gap: 20px;
             flex-direction: column;
             padding: 30px;
+			align-items: center;
         }
         .cardTraining {
             background-color: #6a7189;
@@ -214,6 +216,7 @@
             gap: 20px;
             flex-direction: column;
             padding: 30px;
+			align-items: center;
         }
         .cardExperiences {
             background-color: #6a7189;
@@ -229,6 +232,7 @@
             gap: 20px;
             flex-direction: column;
             padding: 30px;
+			align-items: center;
         }
         .cardContacts {
             background-color: #1e293b;
@@ -277,7 +281,7 @@
             <h3 class="h3">21 anos • Rio de Janeiro - RJ</h3>
 
             <div class="navigationControle">
-                <button class="navigation" type="button"><a href="#projetos">Ver projetos</a></button> <button class="navigation"  type="button"><a href="#contatos">Contato</a></button> <button class="navigation" type="button"><a href="index_en.html" target="_blank">Versão em Inglês</a></button>
+                <a class="navigation" href="#projetos">Ver projetos</a> <a class="navigation" href="#contatos">Contato</a> <a class="navigation" href="index_en.html" target="_blank">Versão em Inglês</a>
             </div>
         </div>
 	</header>
@@ -289,8 +293,9 @@
             <div class="containerText">
 				<h1>Sobre</h1>
 				<p style="line-height: 1.6; font-size: 18px;">Tenho experiência prática no desenvolvimento de aplicações completas, incluindo autenticação de usuários, integração com APIs e deploy em cloud.
-				Já desenvolvi um chatbot corporativo integrado com API da Meta e hospedado na Google Cloud, além de sistemas web com arquitetura MVC.
-				Busco evoluir continuamente como desenvolvedora, criando soluções eficientes e escaláveis.</p>
+				Atualmente atuo no desenvolvimento mobile com React Native, além de desenvolver soluções envolvendo automações, painéis administrativos e integração de sistemas.
+				Já desenvolvi projetos completos utilizando PHP, MySQL, Firebase, Google Cloud e arquitetura MVC, sempre buscando criar aplicações organizadas, funcionais e escaláveis.
+				Busco evoluir continuamente como desenvolvedora Full Stack, criando soluções que gerem impacto real e aprimorando constantemente minhas habilidades técnicas.</p>
 			</div>
 
             <div class="linhaVertical"></div> <!--Vai separar em uma linha vertical-->
@@ -376,9 +381,26 @@
             <div class="containerTraining">
                 <h1>Formação</h1>
 
-                <div class="cardTraining">Unisuam -> Análise e Desenvolvimento de Sistemas – Cursando (Previsão de Conclusão: 2026.2)</div>
+                <div class="cardTraining">
+					<p>🎓 Unisuam
 
-                <div class="cardTraining">Firjan SESI -> Ensino Médio Completo – Dezembro/2022 e Firjan SENAI -> Técnico em Informação Completo – Dezembro/2022</div>
+					Análise e Desenvolvimento de Sistemas
+					Cursando — Previsão: 2026.2</p>
+				</div>
+
+                <div class="cardTraining">
+					<p>🎓 Firjan SENAI
+
+					Técnico em Informação
+					Conclusão: 2022</p>
+				</div>
+
+				 <div class="cardTraining">
+					 <p>🎓 Firjan SESI
+
+					Ensino Médio Completo
+					Conclusão: 2022</p>
+				 </div>
             </div>
         </section>
 
@@ -408,7 +430,7 @@
                     <p>LinkedIn: <a href="https://www.linkedin.com/in/alessandra-pereira-377823237/" target="_blank">Alessandra Pereira</a></p>
                 
                     <div class="navigationControl">
-                        <button class="navigation" type="button">Entrar em contato</button> <button class="navigation"  type="button">Baixar Currículo</button>
+						<a class="navigation" href="mailto: alessandracris393@email.com" target="_blank">Entrar em contato</a> <a class="navigation" href="curriculo.pdf" download>Baixar Currículo</a>
                     </div>
                 </div>
             </div>
