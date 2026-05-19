@@ -1,3 +1,5 @@
+<img width="1366" height="720" alt="Captura de tela 2026-05-19 191956" src="https://github.com/user-attachments/assets/327e1ee6-7af1-4e69-bb62-913324059258" />
+
 # 💼 Portfólio Web — Alessandra
 
 Portfólio desenvolvido para apresentar minhas experiências, competências e projetos na área de tecnologia.
