@@ -5,7 +5,7 @@ Portfólio desenvolvido para apresentar minhas experiências, competências e pr
 O objetivo deste projeto é reunir de forma organizada minhas principais habilidades, experiências profissionais e projetos desenvolvidos utilizando tecnologias web, mobile, cloud e integração de APIs.
 
 ---
-Atualização do portfólio
+
 ## 🚀 Tecnologias utilizadas
 
 - HTML5
