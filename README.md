@@ -1,4 +1,4 @@
-<img width="1366" height="720" alt="Captura de tela 2026-05-19 191956" src="https://github.com/user-attachments/assets/327e1ee6-7af1-4e69-bb62-913324059258" />
+<img width="1350" height="599" alt="Captura de tela 2026-05-20 010424" src="https://github.com/user-attachments/assets/13486d22-dba5-40c2-b952-f964f0504dad" />
 
 # 💼 Portfólio Web — Alessandra
 
