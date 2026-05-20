@@ -405,7 +405,8 @@ footer {
 	  text-align: center;
 	  color: #ffffff;
 	  margin-bottom: 20px;
-	  font-size: 14px;
+	  font-size: 13px;
+	  opacity: 0.8;
   }
   .rowProjects {
 	  flex-direction: column;
