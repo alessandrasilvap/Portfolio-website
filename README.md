@@ -62,5 +62,4 @@ A estrutura single page foi escolhida para facilitar a navegação e permitir um
 🚧 Em desenvolvimento — futuras melhorias incluem:
 - Migração para React
 - Animações e interações avançadas
-- Melhorias de responsividade
 - Integração com novas tecnologias
